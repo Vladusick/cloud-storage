@@ -16,6 +16,7 @@ public class ChatApplication extends Application {
         stage.setTitle("Chat!");
         stage.setScene(scene);
         stage.show();
+        stage.setResizable(false);
     }
 
     public static void main(String[] args) {
