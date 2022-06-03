@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 
 public class ChatController implements Initializable {
 
-    private String homeDir;
+    private String homeDir = System.getProperty("user.home");
 
     private byte[] buf;
 
@@ -85,7 +85,7 @@ public class ChatController implements Initializable {
                 int read = fis.read(buf);
                 network.getOs().write(buf,0,read);
             }
-        }
+       }
         network.getOs().flush();
     }
 
